@@ -3,7 +3,7 @@ Send DMX based on scenes controlled through MIDI
 
 ## Architecture
 
-The whole application is build aroung the game loop. It consists of four steps:
+The whole application is build around the game loop. It consists of four steps:
 1. setup loop speed based on FPS, by default 30
 2. check for MIDI input or additional input/events
 3. update the current state of the played scene
