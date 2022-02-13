@@ -57,6 +57,8 @@ def print_welcome():
   print('        PI LIGHT       ')
   print()
   print('=======================')
+  print()
+  print()
 
 def process_events():
   logging.debug('input processing')
