@@ -1,5 +1,6 @@
 from __future__ import print_function
 from ola.ClientWrapper import ClientWrapper
+from ola.DMXConstants import *
 import array
 import sys
 import time
@@ -9,7 +10,7 @@ wrapper = None
 client = None
 last_frame_time = 0
 universe = 1
-dmx_data = array.array('B', [0] * 512)
+dmx_data = array.array('B', [DMX_MIN_SLOT_VALUE] * DMX_UNIVERSE_SIZE)
 FPS = 30
 
 def DmxSent(status):
@@ -66,21 +67,19 @@ def process_events():
 
 def update_state():
   logging.debug('update state')
-  dmx_data[0] = 255
-  dmx_data[2] = 255
-  dmx_data[8] = 255
-  dmx_data[14] = 255
-  dmx_data[20] = 255
-  dmx_data[26] = 255
-  dmx_data[32] = 255
-  dmx_data[38] = 255
-  dmx_data[44] = 255
-  dmx_data[50] = 255
-  dmx_data[56] = 255
-  dmx_data[62] = 255
-  dmx_data[68] = 255
-
-
+  dmx_data[0] = DMX_MAX_SLOT_VALUE
+  dmx_data[2] = DMX_MAX_SLOT_VALUE
+  dmx_data[8] = DMX_MAX_SLOT_VALUE
+  dmx_data[14] = DMX_MAX_SLOT_VALUE
+  dmx_data[20] = DMX_MAX_SLOT_VALUE
+  dmx_data[26] = DMX_MAX_SLOT_VALUE
+  dmx_data[32] = DMX_MAX_SLOT_VALUE
+  dmx_data[38] = DMX_MAX_SLOT_VALUE
+  dmx_data[44] = DMX_MAX_SLOT_VALUE
+  dmx_data[50] = DMX_MAX_SLOT_VALUE
+  dmx_data[56] = DMX_MAX_SLOT_VALUE
+  dmx_data[62] = DMX_MAX_SLOT_VALUE
+  dmx_data[68] = DMX_MAX_SLOT_VALUE
 
 def render(client, universe, dmx_data):
   logging.debug('read state and send dmx')
