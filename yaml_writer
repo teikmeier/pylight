@@ -1,0 +1,39 @@
+import yaml
+import copy
+
+#color library
+
+deepBlue = {'R': 0, 'G': 0, 'B': 255, 'W': 0, 'A': 0, 'UV': 0}
+WhiteCold = {'R': 0, 'G': 0, 'B': 92, 'W': 255, 'A': 0, 'UV': 0}
+
+#test for reading yml file
+'''
+with open('file.yml', 'r') as file:
+    opened_file = yaml.safe_load(file)
+
+'''
+
+#initializing scene
+RGBWAU_dict = {'R': 0, 'G': 0, 'B': 0, 'W': 0, 'A': 0, 'UV': 0}
+LedLamps_dict = {}
+for i in range(0,12):
+     LedLamps_dict[i+1]= copy.deepcopy(RGBWAU_dict)
+
+LedBar1 = {'00_Fader' : 0, '01_Strobe': 0, '02_Lamps': copy.deepcopy(LedLamps_dict)}    #pyyaml dump sorts alphabetically, which is annoying 
+LedBar2 = {'00_Fader' : 0, '01_Strobe': 0, '02_Lamps': copy.deepcopy(LedLamps_dict)}
+
+scene = {'LedBar1': LedBar1, 'LedBar2' : LedBar2}
+
+#setting scene
+for i in range(0,12):
+    scene['LedBar1']['02_Lamps'][i+1] = copy.deepcopy(deepBlue)
+    scene['LedBar2']['02_Lamps'][i+1] = copy.deepcopy(WhiteCold)
+scene['LedBar1']['00_Fader'] = 255
+scene['LedBar2']['00_Fader'] = 255
+
+#write yml file
+with open(r'TestScene.yml', 'w') as file:
+
+    outputs = yaml.dump(scene, file)
+
+
