@@ -1,0 +1,51 @@
+version: 0.1
+name: Scene-Template
+faders:
+  0:
+    value: 255
+    type: default
+  1:
+    value: 255
+    type: default
+    movement: # optional
+      shape: sine
+      min: 0 # optional, default: 0
+      max: 255 # optional, default: 0
+      duration_ms: 400 # optional, default: 1000
+  2:
+    value: 255
+    type: default
+    movement:
+      shape: saw
+      reverse: false # optional, default: false
+      min: 0
+      max: 255
+      mid: 125 # optional, default: mid of min, max
+      duration_percentage: 400 # optional, default: 100
+      repetition: 0 # optional, default: 0, 0 means infinit
+  3:
+    value: 255
+    type: default
+    movement:
+      shape: triangle
+      reverse: true
+      min: 0
+      max: 255
+      mid: -125
+      duration_percentage: 400
+      repetition: 0
+  4:
+    value: 255
+    type: midi
+    midi-channel: 2
+    # ...
+  5:
+    value: 255
+    type: default
+    external_mute: hardwareswitch_01
+
+
+
+
+    
+
