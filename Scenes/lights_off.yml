@@ -1,0 +1,9 @@
+00_version: '0.1'
+01_name: lights_off
+faders:
+  0:
+    type: default
+    value: 0
+  74:
+    type: default
+    value: 0

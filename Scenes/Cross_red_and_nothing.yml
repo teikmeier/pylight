@@ -1,0 +1,45 @@
+00_version: '0.1'
+01_name: Cross_red_and_nothing
+faders:
+  0:
+    type: default
+    value: 255
+  2:
+    type: default
+    value: 255
+  8:
+    type: default
+    value: 255
+  14:
+    type: default
+    value: 255
+  20:
+    type: default
+    value: 255
+  26:
+    type: default
+    value: 255
+  32:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  112:
+    type: default
+    value: 255
+  118:
+    type: default
+    value: 255
+  124:
+    type: default
+    value: 255
+  130:
+    type: default
+    value: 255
+  136:
+    type: default
+    value: 255
+  142:
+    type: default
+    value: 255

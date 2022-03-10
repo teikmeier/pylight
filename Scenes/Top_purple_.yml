@@ -1,0 +1,153 @@
+00_version: '0.1'
+01_name: Top_purple_
+faders:
+  0:
+    type: default
+    value: 255
+  2:
+    type: default
+    value: 211
+  3:
+    type: default
+    value: 25
+  4:
+    type: default
+    value: 255
+  7:
+    type: default
+    value: 255
+  8:
+    type: default
+    value: 211
+  9:
+    type: default
+    value: 25
+  10:
+    type: default
+    value: 255
+  13:
+    type: default
+    value: 255
+  14:
+    type: default
+    value: 211
+  15:
+    type: default
+    value: 25
+  16:
+    type: default
+    value: 255
+  19:
+    type: default
+    value: 255
+  20:
+    type: default
+    value: 211
+  21:
+    type: default
+    value: 25
+  22:
+    type: default
+    value: 255
+  25:
+    type: default
+    value: 255
+  26:
+    type: default
+    value: 211
+  27:
+    type: default
+    value: 25
+  28:
+    type: default
+    value: 255
+  31:
+    type: default
+    value: 255
+  32:
+    type: default
+    value: 211
+  33:
+    type: default
+    value: 25
+  34:
+    type: default
+    value: 255
+  37:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  76:
+    type: default
+    value: 211
+  77:
+    type: default
+    value: 25
+  78:
+    type: default
+    value: 255
+  81:
+    type: default
+    value: 255
+  82:
+    type: default
+    value: 211
+  83:
+    type: default
+    value: 25
+  84:
+    type: default
+    value: 255
+  87:
+    type: default
+    value: 255
+  88:
+    type: default
+    value: 211
+  89:
+    type: default
+    value: 25
+  90:
+    type: default
+    value: 255
+  93:
+    type: default
+    value: 255
+  94:
+    type: default
+    value: 211
+  95:
+    type: default
+    value: 25
+  96:
+    type: default
+    value: 255
+  99:
+    type: default
+    value: 255
+  100:
+    type: default
+    value: 211
+  101:
+    type: default
+    value: 25
+  102:
+    type: default
+    value: 255
+  105:
+    type: default
+    value: 255
+  106:
+    type: default
+    value: 211
+  107:
+    type: default
+    value: 25
+  108:
+    type: default
+    value: 255
+  111:
+    type: default
+    value: 255

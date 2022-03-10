@@ -1,0 +1,48 @@
+00_version: '0.1'
+01_name: Full_blue_deep_right_strobe
+faders:
+  0:
+    type: default
+    value: 255
+  1:
+    type: default
+    value: 255
+  4:
+    type: default
+    value: 255
+  10:
+    type: default
+    value: 255
+  16:
+    type: default
+    value: 255
+  22:
+    type: default
+    value: 255
+  28:
+    type: default
+    value: 255
+  34:
+    type: default
+    value: 255
+  40:
+    type: default
+    value: 255
+  46:
+    type: default
+    value: 255
+  52:
+    type: default
+    value: 255
+  58:
+    type: default
+    value: 255
+  64:
+    type: default
+    value: 255
+  70:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
