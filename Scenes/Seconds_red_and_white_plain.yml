@@ -1,0 +1,81 @@
+00_version: '0.1'
+01_name: Seconds_red_and_white_plain
+faders:
+  0:
+    type: default
+    value: 255
+  5:
+    type: default
+    value: 255
+  8:
+    type: default
+    value: 255
+  17:
+    type: default
+    value: 255
+  20:
+    type: default
+    value: 255
+  29:
+    type: default
+    value: 255
+  32:
+    type: default
+    value: 255
+  41:
+    type: default
+    value: 255
+  44:
+    type: default
+    value: 255
+  53:
+    type: default
+    value: 255
+  56:
+    type: default
+    value: 255
+  65:
+    type: default
+    value: 255
+  68:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  79:
+    type: default
+    value: 255
+  82:
+    type: default
+    value: 255
+  91:
+    type: default
+    value: 255
+  94:
+    type: default
+    value: 255
+  103:
+    type: default
+    value: 255
+  106:
+    type: default
+    value: 255
+  115:
+    type: default
+    value: 255
+  118:
+    type: default
+    value: 255
+  127:
+    type: default
+    value: 255
+  130:
+    type: default
+    value: 255
+  139:
+    type: default
+    value: 255
+  142:
+    type: default
+    value: 255

@@ -1,0 +1,45 @@
+00_version: '0.1'
+01_name: Rise4_orange_right
+faders:
+  0:
+    type: default
+    value: 255
+  50:
+    type: default
+    value: 255
+  51:
+    type: default
+    value: 120
+  54:
+    type: default
+    value: 110
+  56:
+    type: default
+    value: 255
+  57:
+    type: default
+    value: 120
+  60:
+    type: default
+    value: 110
+  62:
+    type: default
+    value: 255
+  63:
+    type: default
+    value: 120
+  66:
+    type: default
+    value: 110
+  68:
+    type: default
+    value: 255
+  69:
+    type: default
+    value: 120
+  72:
+    type: default
+    value: 110
+  74:
+    type: default
+    value: 0

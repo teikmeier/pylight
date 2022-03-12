@@ -1,0 +1,27 @@
+00_version: '0.1'
+01_name: Rise2_orange_right
+faders:
+  0:
+    type: default
+    value: 255
+  62:
+    type: default
+    value: 255
+  63:
+    type: default
+    value: 120
+  66:
+    type: default
+    value: 110
+  68:
+    type: default
+    value: 255
+  69:
+    type: default
+    value: 120
+  72:
+    type: default
+    value: 110
+  74:
+    type: default
+    value: 0

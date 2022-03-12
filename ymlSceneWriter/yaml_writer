@@ -19,10 +19,12 @@ def main():
 
     strobe = 0
     color1 = Colors('red')
-    color2 = Colors('yellow')
+    color2 = Colors('white_plain')
     #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
-    name = set_top_color(color1, strobe, left = True, right = True)
+    #name = set_top_color(color1, strobe, left = True, right = True)
+    #name = set_rise_color(color1, strobe, rise_number = 2, left = True, right = False)
+    name = set_seconds_colors(color1, color2, strobe)
     #name = set_bottom_color(color1, strobe, left = True, right = True)
     #name = set_lights_off()
 
@@ -38,7 +40,7 @@ scene creator functions static
 '''
 def set_full_color(color, strobe = 0, right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
-    name = 'Full_' + color.get_color_name() + '_' + side_name
+    name = 'Full_' + color.get_color_name() + side_name
     if strobe > 0:
         name = name + '_strobe'
     scene['01_name'] = name
@@ -74,10 +76,31 @@ def set_cross_colors(color1, color2, strobe):
 
     return name
 
+def set_seconds_colors(color1, color2, strobe):
+    led_bars = [led_bar_01, led_bar_02]
+    name = 'Seconds_' + color1.get_color_name() + '_and_' + color2.get_color_name()
+    if strobe > 0:
+        name = name + '_strobe'
+    scene['01_name'] = name
+    
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+        
+            if (i%2 == 1):
+                set_color_group(color_group, color1)
+            else:
+                set_color_group(color_group, color2)
+
+    return name
+
 
 def set_top_color(color, strobe,  right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
-    name = 'Top_' + color.get_color_name() + '_' + side_name
+    name = 'Top_' + color.get_color_name() + side_name
     if strobe > 0:
         name = name + '_strobe'
     scene['01_name'] = name
@@ -97,7 +120,7 @@ def set_top_color(color, strobe,  right = True, left = True):
 
 def set_bottom_color(color, strobe,  right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
-    name = 'Bottom_' + color.get_color_name() + '_' + side_name
+    name = 'Bottom_' + color.get_color_name() + side_name
     if strobe > 0:
         name = name + '_strobe'
     scene['01_name'] = name
@@ -114,14 +137,32 @@ def set_bottom_color(color, strobe,  right = True, left = True):
 
     return name
 
+
+def set_rise_color(color, strobe,  rise_number, right = True, left = True):
+    led_bars, side_name = choose_led_bars(right, left)
+    name = 'Rise' + str(rise_number) + '_' + color.get_color_name() + side_name
+    if strobe > 0:
+        name = name + '_strobe'
+    scene['01_name'] = name
+    
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+        
+            if (i%12 >= (12-rise_number)):
+                set_color_group(color_group, color)
+
+    return name
+
 '''
 tbd:
 outer 4 and middle 4 (combo4)
 outer 2 and middle 8
 combo2
 combo3
-seconds (combo1)
-Rise 1,2,3,4,5 dann full (right, left)
 '''
 
 
@@ -161,10 +202,12 @@ def choose_led_bars(right, left):
         side_name = ''
     elif right == True:
         led_bars = [led_bar_01]
-        side_name = 'right'
+        side_name = '_right'
+        faders[led_bar_02.get_dimmer_adress()] = define_fader(0)
     elif left == True:
         led_bars = [led_bar_02]
-        side_name = 'left'
+        side_name = '_left'
+        faders[led_bar_01.get_dimmer_adress()] = define_fader(0)
     return led_bars, side_name
     
 def define_fader(value, type = 'default'):
