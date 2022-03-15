@@ -12,6 +12,7 @@ faders:
       min: 0 # optional, default: 0
       max: 255 # optional, default: 0
       duration_ms: 400 # optional, default: 1000
+      delay_ms: 25 # optional, default: 100
   2:
     value: 255
     type: default
@@ -23,6 +24,7 @@ faders:
       mid: 125 # optional, default: mid of min, max
       duration_percentage: 400 # optional, default: 100
       repetition: 0 # optional, default: 0, 0 means infinit
+      delay_percentage: 25 # optional, default: 0
   3:
     value: 255
     type: default
