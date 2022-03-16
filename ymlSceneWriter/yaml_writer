@@ -23,9 +23,13 @@ def main():
     #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
     #name = set_top_color(color1, strobe, left = True, right = True)
-    #name = set_rise_color(color1, strobe, rise_number = 2, left = True, right = False)
-    name = set_seconds_colors(color1, color2, strobe)
     #name = set_bottom_color(color1, strobe, left = True, right = True)
+    #name = set_rise_color(color1, strobe, rise_number = 2, left = True, right = False)
+    #name = set_seconds_colors(color1, color2, strobe)
+    #name = set_combo_colors(color1, color2, strobe, combo = 4, invert = True) #combo can be set to 2,3,4 / invert = True inverts the second LED bar
+    #name = set_outer2_colors(color1, color2, strobe, invert = False)
+    #name = set_outer3_colors(color1, color2, strobe, invert = False)
+    
     #name = set_lights_off()
 
     scene['faders'] = faders
@@ -52,7 +56,7 @@ def set_full_color(color, strobe = 0, right = True, left = True):
         for i in range(0, led_bar.number_of_color_groups):
             color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
             set_color_group(color_group, color)
-            
+
     return name
 
 def set_cross_colors(color1, color2, strobe):
@@ -97,7 +101,6 @@ def set_seconds_colors(color1, color2, strobe):
 
     return name
 
-
 def set_top_color(color, strobe,  right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
     name = 'Top_' + color.get_color_name() + side_name
@@ -116,7 +119,6 @@ def set_top_color(color, strobe,  right = True, left = True):
                 set_color_group(color_group, color)
 
     return name
-
 
 def set_bottom_color(color, strobe,  right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
@@ -137,7 +139,6 @@ def set_bottom_color(color, strobe,  right = True, left = True):
 
     return name
 
-
 def set_rise_color(color, strobe,  rise_number, right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
     name = 'Rise' + str(rise_number) + '_' + color.get_color_name() + side_name
@@ -157,15 +158,92 @@ def set_rise_color(color, strobe,  rise_number, right = True, left = True):
 
     return name
 
-'''
-tbd:
-outer 4 and middle 4 (combo4)
-outer 2 and middle 8
-combo2
-combo3
-'''
+def set_combo_colors(color1, color2, strobe, combo, invert):   #combo (int) is the number of neighbor LEDs with the same color, can be set to 2,3,4
+    led_bars = [led_bar_01, led_bar_02]
+    name = 'Combo' + str(combo) + '_' + color1.get_color_name() + '_and_' + color2.get_color_name()
+    if invert == True:
+        name = name + '_invert'
+    if strobe > 0:
+        name = name + '_strobe'
+    scene['01_name'] = name
+    
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
 
+            if invert == True:
+                if (i%(combo*2) < combo and led_bar == led_bar_01) or (i%(combo*2) >= combo and led_bar == led_bar_02):
+                    set_color_group(color_group, color1)
+                else:
+                    set_color_group(color_group, color2)
+            elif invert == False:
+                if (i%(combo*2) < combo):
+                    set_color_group(color_group, color1)
+                else:
+                    set_color_group(color_group, color2)
 
+    return name
+
+def set_outer2_colors(color1, color2, strobe, invert):   #combo (int) is the number of neighbor LEDs with the same color, can be set to 2,3,4
+    led_bars = [led_bar_01, led_bar_02]
+    name = 'Outer2' + color1.get_color_name() + '_and_' + color2.get_color_name()
+    if invert == True:
+        name = name + '_invert'
+    if strobe > 0:
+        name = name + '_strobe'
+    scene['01_name'] = name
+    
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            
+            if invert == True:
+                if (i%10 < 2 and led_bar == led_bar_01) or (i%10 >= 2 and led_bar == led_bar_02):
+                    set_color_group(color_group, color1)
+                else:
+                    set_color_group(color_group, color2)
+            elif invert == False:
+                if (i%10 < 2):
+                    set_color_group(color_group, color1)
+                else:
+                    set_color_group(color_group, color2)
+
+    return name
+
+def set_outer3_colors(color1, color2, strobe, invert):   #combo (int) is the number of neighbor LEDs with the same color, can be set to 2,3,4
+    led_bars = [led_bar_01, led_bar_02]
+    name = 'Outer3_' + color1.get_color_name() + '_and_' + color2.get_color_name()
+    if invert == True:
+        name = name + '_invert'
+    if strobe > 0:
+        name = name + '_strobe'
+    scene['01_name'] = name
+    
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            
+            if invert == True:
+                if (i%9 < 3 and led_bar == led_bar_01) or (i%9 >= 3 and led_bar == led_bar_02):
+                    set_color_group(color_group, color1)
+                else:
+                    set_color_group(color_group, color2)
+            elif invert == False:
+                if (i%9 < 3):
+                    set_color_group(color_group, color1)
+                else:
+                    set_color_group(color_group, color2)
+
+    return name
 
 def set_lights_off():
     led_bars = [led_bar_01, led_bar_02]
@@ -178,13 +256,10 @@ def set_lights_off():
     return name
 
 
-
-
 '''
 tbd: scene creator functions dynamic
 tbd: include foggers as LEDs
 '''
-
 
 
 '''

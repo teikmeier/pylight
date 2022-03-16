@@ -1,0 +1,81 @@
+00_version: '0.1'
+01_name: Combo4_red_and_white_plain
+faders:
+  0:
+    type: default
+    value: 255
+  2:
+    type: default
+    value: 255
+  8:
+    type: default
+    value: 255
+  14:
+    type: default
+    value: 255
+  20:
+    type: default
+    value: 255
+  29:
+    type: default
+    value: 255
+  35:
+    type: default
+    value: 255
+  41:
+    type: default
+    value: 255
+  47:
+    type: default
+    value: 255
+  50:
+    type: default
+    value: 255
+  56:
+    type: default
+    value: 255
+  62:
+    type: default
+    value: 255
+  68:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  76:
+    type: default
+    value: 255
+  82:
+    type: default
+    value: 255
+  88:
+    type: default
+    value: 255
+  94:
+    type: default
+    value: 255
+  103:
+    type: default
+    value: 255
+  109:
+    type: default
+    value: 255
+  115:
+    type: default
+    value: 255
+  121:
+    type: default
+    value: 255
+  124:
+    type: default
+    value: 255
+  130:
+    type: default
+    value: 255
+  136:
+    type: default
+    value: 255
+  142:
+    type: default
+    value: 255

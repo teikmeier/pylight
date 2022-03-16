@@ -1,0 +1,81 @@
+00_version: '0.1'
+01_name: Outer2_red_and_white_plain_invert
+faders:
+  0:
+    type: default
+    value: 255
+  2:
+    type: default
+    value: 255
+  8:
+    type: default
+    value: 255
+  17:
+    type: default
+    value: 255
+  23:
+    type: default
+    value: 255
+  29:
+    type: default
+    value: 255
+  35:
+    type: default
+    value: 255
+  41:
+    type: default
+    value: 255
+  47:
+    type: default
+    value: 255
+  53:
+    type: default
+    value: 255
+  59:
+    type: default
+    value: 255
+  62:
+    type: default
+    value: 255
+  68:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  79:
+    type: default
+    value: 255
+  85:
+    type: default
+    value: 255
+  88:
+    type: default
+    value: 255
+  94:
+    type: default
+    value: 255
+  100:
+    type: default
+    value: 255
+  106:
+    type: default
+    value: 255
+  112:
+    type: default
+    value: 255
+  118:
+    type: default
+    value: 255
+  124:
+    type: default
+    value: 255
+  130:
+    type: default
+    value: 255
+  139:
+    type: default
+    value: 255
+  145:
+    type: default
+    value: 255
