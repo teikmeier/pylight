@@ -1,0 +1,585 @@
+00_version: '0.1'
+01_name: Full_orange_sine_dur200percentage
+faders:
+  0:
+    type: default
+    value: 255
+  2:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  3:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  6:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  8:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  9:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  12:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  14:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  15:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  18:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  20:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  21:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  24:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  26:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  27:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  30:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  32:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  33:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  36:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  38:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  39:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  42:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  44:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  45:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  48:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  50:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  51:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  54:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  56:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  57:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  60:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  62:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  63:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  66:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  68:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  69:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  72:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  74:
+    type: default
+    value: 255
+  76:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  77:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  80:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  82:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  83:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  86:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  88:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  89:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  92:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  94:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  95:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  98:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  100:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  101:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  104:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  106:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  107:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  110:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  112:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  113:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  116:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  118:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  119:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  122:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  124:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  125:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  128:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  130:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  131:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  134:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  136:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  137:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  140:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110
+  142:
+    movement:
+      duration_percentage: 200
+      max: 255
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  143:
+    movement:
+      duration_percentage: 200
+      max: 120
+      min: 0
+      shape: sine
+    type: default
+    value: 120
+  146:
+    movement:
+      duration_percentage: 200
+      max: 110
+      min: 0
+      shape: sine
+    type: default
+    value: 110

@@ -1,6 +1,8 @@
 import yaml
 from fixtures import Fixtures, ColorGroups
-from colorLib import Colors
+from colorLib import Colors, DynamicColors
+import copy
+
 
 scene = {'00_version': '0.1'}
 name = ''
@@ -17,9 +19,10 @@ faders = {led_bar_01.get_dimmer_adress(): {'value': 255, 'type': 'default'},  le
 
 def main():
 
-    strobe = 0
-    color1 = Colors('red')
-    color2 = Colors('white_plain')
+    '''static functions'''
+    #strobe = 0
+    #color1 = Colors('red')
+    #color2 = Colors('white_plain')
     #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
     #name = set_top_color(color1, strobe, left = True, right = True)
@@ -29,8 +32,17 @@ def main():
     #name = set_combo_colors(color1, color2, strobe, combo = 4, invert = True) #combo can be set to 2,3,4 / invert = True inverts the second LED bar
     #name = set_outer2_colors(color1, color2, strobe, invert = False)
     #name = set_outer3_colors(color1, color2, strobe, invert = False)
-    
     #name = set_lights_off()
+
+    '''dynamic functions'''
+    color1 = Colors('blue_cold')
+    strobe = 0
+    dynamics = DynamicColors('saw', color1, duration_percentage = 400)
+    #dynamics.set_min_max_mid([1,0,0,0,0,0], [254,0,0,0,0,0], [25,0,0,0,0,0])
+    #dynamics.set_duration(200)
+    #dynamics.set_repition(1)
+    #dynamics.set_reverse(True)
+    name = set_full_color_movement(color1, dynamics, strobe)
 
     scene['faders'] = faders
 
@@ -263,11 +275,40 @@ tbd: include foggers as LEDs
 
 
 '''
+dynamic functions
+'''
+
+def set_full_color_movement(color, movement, strobe = 0, right = True, left = True):
+    led_bars, side_name = choose_led_bars(right, left)
+    name = 'Full_' + color.get_color_name() + '_' + movement.get_shape() + side_name
+    if strobe > 0:
+        name = name + '_strobe'
+    if movement.is_reverse() == True:
+        name = name + '_rev'
+    if movement.get_repitition() > 0:
+        name = name + '_rep'+ str(movement.get_repitition())
+    name = name + '_dur' + str(movement.get_duration()) + str(movement.get_timing_unit())
+    scene['01_name'] = name
+
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            set_color_group(color_group, color, movement)
+
+    return name
+
+
+'''
 helper functions
 '''
-def set_color_group(color_group, color):
+def set_color_group(color_group, color, movement = None):
     for i in range(0,color_group.color_group_size):
-        if not color.get_color()[i] == 0:
+        if movement != None and not color.get_color()[i] == 0:
+            faders[color_group.color_group_adress+i] = define_fader(color.get_color()[i], movement.get_movement()[i])
+        if movement == None and not color.get_color()[i] == 0:
             faders[color_group.color_group_adress+i] = define_fader(color.get_color()[i])
     return
 
@@ -285,8 +326,12 @@ def choose_led_bars(right, left):
         faders[led_bar_01.get_dimmer_adress()] = define_fader(0)
     return led_bars, side_name
     
-def define_fader(value, type = 'default'):
-    fader = {'value': value, 'type': type}
+def define_fader(value, movement = None, type = 'default'):
+    if movement == None:
+        fader = {'value': value, 'type': type}
+    else:
+        fader = {'value': value, 'type': type, 'movement': copy.deepcopy(movement)}
+
     return fader
 
 #main
