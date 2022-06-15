@@ -1,0 +1,441 @@
+00_version: '0.1'
+01_name: Full_blue_cold_saw_chase_pct10_dur400percentage
+faders:
+  0:
+    type: default
+    value: 255
+  4:
+    movement:
+      delay_percentage: 0
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  5:
+    movement:
+      delay_percentage: 0
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  10:
+    movement:
+      delay_percentage: 10
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  11:
+    movement:
+      delay_percentage: 10
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  16:
+    movement:
+      delay_percentage: 20
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  17:
+    movement:
+      delay_percentage: 20
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  22:
+    movement:
+      delay_percentage: 30
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  23:
+    movement:
+      delay_percentage: 30
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  28:
+    movement:
+      delay_percentage: 40
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  29:
+    movement:
+      delay_percentage: 40
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  34:
+    movement:
+      delay_percentage: 50
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  35:
+    movement:
+      delay_percentage: 50
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  40:
+    movement:
+      delay_percentage: 60
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  41:
+    movement:
+      delay_percentage: 60
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  46:
+    movement:
+      delay_percentage: 70
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  47:
+    movement:
+      delay_percentage: 70
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  52:
+    movement:
+      delay_percentage: 80
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  53:
+    movement:
+      delay_percentage: 80
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  58:
+    movement:
+      delay_percentage: 90
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  59:
+    movement:
+      delay_percentage: 90
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  64:
+    movement:
+      delay_percentage: 100
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  65:
+    movement:
+      delay_percentage: 100
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  70:
+    movement:
+      delay_percentage: 110
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  71:
+    movement:
+      delay_percentage: 110
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  74:
+    type: default
+    value: 255
+  78:
+    movement:
+      delay_percentage: 130
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  79:
+    movement:
+      delay_percentage: 130
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  84:
+    movement:
+      delay_percentage: 140
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  85:
+    movement:
+      delay_percentage: 140
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  90:
+    movement:
+      delay_percentage: 150
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  91:
+    movement:
+      delay_percentage: 150
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  96:
+    movement:
+      delay_percentage: 160
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  97:
+    movement:
+      delay_percentage: 160
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  102:
+    movement:
+      delay_percentage: 170
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  103:
+    movement:
+      delay_percentage: 170
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  108:
+    movement:
+      delay_percentage: 180
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  109:
+    movement:
+      delay_percentage: 180
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  114:
+    movement:
+      delay_percentage: 190
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  115:
+    movement:
+      delay_percentage: 190
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  120:
+    movement:
+      delay_percentage: 200
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  121:
+    movement:
+      delay_percentage: 200
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  126:
+    movement:
+      delay_percentage: 210
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  127:
+    movement:
+      delay_percentage: 210
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  132:
+    movement:
+      delay_percentage: 220
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  133:
+    movement:
+      delay_percentage: 220
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  138:
+    movement:
+      delay_percentage: 230
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  139:
+    movement:
+      delay_percentage: 230
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128
+  144:
+    movement:
+      delay_percentage: 240
+      duration_percentage: 400
+      max: 255
+      min: 0
+      shape: saw
+    type: default
+    value: 255
+  145:
+    movement:
+      delay_percentage: 240
+      duration_percentage: 400
+      max: 128
+      min: 0
+      shape: saw
+    type: default
+    value: 128

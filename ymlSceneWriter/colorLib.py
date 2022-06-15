@@ -54,12 +54,13 @@ class Colors:
 
 
 class DynamicColors:
-    def __init__(self, movement_shape, color = None, duration_ms = None, duration_percentage = None):
+    def __init__(self, movement_shape, color = None, duration_ms = None, duration_percentage = None, chase_percentage = None):
         #R G B W A UV
         self.movement = []
         self.shape = movement_shape #string
         self.reverse = False
         self.repititon = 0
+        self.chase_percentage = chase_percentage
         
         if duration_ms == None and duration_percentage == None:
             self.duration = 400
@@ -73,11 +74,17 @@ class DynamicColors:
 
         if color != None:
             for i in color.get_color():
-                self.movement.append({'shape': movement_shape, 'min': 0, 'max': i, 'duration_' + self.timing_unit: self.duration})
+                if self.chase_percentage == 0:
+                    self.movement.append({'shape': movement_shape, 'min': 0, 'max': i, 'duration_' + self.timing_unit: self.duration})
+                else:
+                    self.movement.append({'shape': movement_shape, 'min': 0, 'max': i, 'duration_' + self.timing_unit: self.duration, 'delay_percentage': self.chase_percentage})
         else:
             for i in range(0,6):
-                self.movement.append({'shape': movement_shape, 'duration_' + self.timing_unit: self.duration})
-
+                if self.chase_percentage == 0:
+                    self.movement.append({'shape': movement_shape, 'duration_' + self.timing_unit: self.duration})
+                else:
+                    self.movement.append({'shape': movement_shape, 'duration_' + self.timing_unit: self.duration, 'delay_percentage': self.chase_percentage})
+    
     def set_min_max_mid(self, min, max, mid = None):
         # min, max and mid must be lists of size 6 to represent R, G, B, W, A, UV
         for i in range(0,6):
@@ -105,6 +112,11 @@ class DynamicColors:
         self.repititon = repitition
         for i in range(0,6):
                 self.movement[i]['repitition'] = repitition
+    
+    def set_chase_percentage(self, delay_percentage):
+        self.chase_percentage = delay_percentage
+        for i in range(0,6):
+            self.movement[i]['delay_percentage'] = delay_percentage
     
     def get_movement(self):
         return self.movement
