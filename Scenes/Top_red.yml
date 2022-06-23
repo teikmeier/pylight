@@ -1,12 +1,9 @@
 00_version: '0.1'
-01_name: Full_red_strobe
+01_name: Top_red
 faders:
   0:
     type: default
     value: 255
-  1:
-    type: default
-    value: 100
   2:
     type: default
     value: 255
@@ -25,30 +22,9 @@ faders:
   32:
     type: default
     value: 255
-  38:
-    type: default
-    value: 255
-  44:
-    type: default
-    value: 255
-  50:
-    type: default
-    value: 255
-  56:
-    type: default
-    value: 255
-  62:
-    type: default
-    value: 255
-  68:
-    type: default
-    value: 255
   74:
     type: default
     value: 255
-  75:
-    type: default
-    value: 100
   76:
     type: default
     value: 255
@@ -67,39 +43,15 @@ faders:
   106:
     type: default
     value: 255
-  112:
-    type: default
-    value: 255
-  118:
-    type: default
-    value: 255
-  124:
-    type: default
-    value: 255
-  130:
-    type: default
-    value: 255
-  136:
-    type: default
-    value: 255
-  142:
-    type: default
-    value: 255
   149:
     type: default
     value: 255
-  151:
-    type: default
-    value: 100
   152:
     type: default
     value: 255
   156:
     type: default
     value: 255
-  158:
-    type: default
-    value: 100
   159:
     type: default
     value: 255

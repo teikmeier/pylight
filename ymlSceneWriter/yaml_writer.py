@@ -14,18 +14,18 @@ fogger_01 = Fixtures(dmx_adress = 149, dimmer_channel= 2, strobe_channel = 4, co
 fogger_02 = Fixtures(dmx_adress = 156, dimmer_channel= 2, strobe_channel = 4, color_group_size = 3, number_of_color_groups = 1, color_groups_start_channel = 5, fog_channel = 1)
 
 #set overall faders
-faders = {led_bar_01.get_dimmer_adress(): {'value': 255, 'type': 'default'},  led_bar_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}}
+faders = {led_bar_01.get_dimmer_adress(): {'value': 255, 'type': 'default'},  led_bar_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_01.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}}
 
 
 def main():
 
     '''static functions'''
-    #strobe = 0
-    #color1 = Colors('red')
+    strobe = 0
+    color1 = Colors('red')
     #color2 = Colors('white_plain')
     #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
-    #name = set_top_color(color1, strobe, left = True, right = True)
+    name = set_top_color(color1, strobe, left = True, right = True)
     #name = set_bottom_color(color1, strobe, left = True, right = True)
     #name = set_rise_color(color1, strobe, rise_number = 2, left = True, right = False)
     #name = set_seconds_colors(color1, color2, strobe)
@@ -39,15 +39,15 @@ def main():
     strobe = 0
     chase_percentage = 10
     chase_shift_left = 0
-    chase_shift_right = 130
+    chase_shift_right = 100
     dynamics = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage)
     #dynamics.set_min_max_mid([1,0,0,0,0,0], [254,0,0,0,0,0], [25,0,0,0,0,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
     #name = set_full_color_movement(color1, dynamics, strobe)
+    #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
 
-    name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
 
     scene['faders'] = faders
 
@@ -61,6 +61,7 @@ scene creator functions static
 '''
 def set_full_color(color, strobe = 0, right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
+    foggers = [fogger_01, fogger_02]
     name = 'Full_' + color.get_color_name() + side_name
     if strobe > 0:
         name = name + '_strobe'
@@ -73,7 +74,13 @@ def set_full_color(color, strobe = 0, right = True, left = True):
         for i in range(0, led_bar.number_of_color_groups):
             color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
             set_color_group(color_group, color)
-
+    for fogger in foggers:
+        faders[fogger.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[fogger.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, fogger.number_of_color_groups):
+            color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
+            set_color_group(color_group, color, fogger_flag = True)
     return name
 
 def set_cross_colors(color1, color2, strobe):
@@ -120,6 +127,7 @@ def set_seconds_colors(color1, color2, strobe):
 
 def set_top_color(color, strobe,  right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
+    foggers = [fogger_01, fogger_02]
     name = 'Top_' + color.get_color_name() + side_name
     if strobe > 0:
         name = name + '_strobe'
@@ -135,10 +143,19 @@ def set_top_color(color, strobe,  right = True, left = True):
             if (i%12 < 6):
                 set_color_group(color_group, color)
 
+    for fogger in foggers:
+        faders[fogger.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[fogger.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, fogger.number_of_color_groups):
+            color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
+            set_color_group(color_group, color, fogger_flag = True)
+
     return name
 
 def set_bottom_color(color, strobe,  right = True, left = True):
     led_bars, side_name = choose_led_bars(right, left)
+    foggers = [fogger_01, fogger_02]
     name = 'Bottom_' + color.get_color_name() + side_name
     if strobe > 0:
         name = name + '_strobe'
@@ -153,6 +170,14 @@ def set_bottom_color(color, strobe,  right = True, left = True):
         
             if (i%12 >= 6):
                 set_color_group(color_group, color)
+
+    for fogger in foggers:
+        faders[fogger.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[fogger.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, fogger.number_of_color_groups):
+            color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
+            set_color_group(color_group, color, fogger_flag = True)
 
     return name
 
@@ -338,12 +363,17 @@ def set_full_color_chase(color, movement, strobe = 0, chase_percentage = 0, chas
 '''
 helper functions
 '''
-def set_color_group(color_group, color, movement = None):
-    for i in range(0,color_group.color_group_size):
-        if movement != None and not color.get_color()[i] == 0:
-            faders[color_group.color_group_adress+i] = define_fader(color.get_color()[i], movement.get_movement()[i])
-        if movement == None and not color.get_color()[i] == 0:
-            faders[color_group.color_group_adress+i] = define_fader(color.get_color()[i])
+def set_color_group(color_group, color, movement = None, fogger_flag = False):
+    if fogger_flag == True:
+        for i in range(0,color_group.color_group_size):
+            if movement == None and not color.get_color_fogger()[i] == 0:
+                faders[color_group.color_group_adress+i] = define_fader(color.get_color_fogger()[i])
+    else:
+        for i in range(0,color_group.color_group_size):
+            if movement != None and not color.get_color()[i] == 0:
+                faders[color_group.color_group_adress+i] = define_fader(color.get_color()[i], movement.get_movement()[i])
+            if movement == None and not color.get_color()[i] == 0:
+                faders[color_group.color_group_adress+i] = define_fader(color.get_color()[i])
     return
 
 def choose_led_bars(right, left):

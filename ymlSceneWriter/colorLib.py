@@ -6,48 +6,65 @@ class Colors:
 
         if color == 'blue_deep':
             self.color = [0, 0, 255, 0, 0, 0]
+            self.color_fogger = [0, 0, 255]
 
         elif color == 'blue_cold':
             self.color = [0, 0, 255, 128, 0, 0]
+            self.color_fogger = [55, 55, 255]
 
         elif color == 'white_cold':
             self.color = [0, 0, 92, 255, 0, 0]
+            self.color_fogger = [200, 200, 255]
 
         elif color == 'white_plain':
             self.color = [0, 0, 0, 255, 0, 0]
+            self.color_fogger = [255, 255, 255]
 
         elif color == 'white_warm':
-            self.color = [0, 0, 255, 140, 0, 0]
+            self.color = [0, 0, 0, 255, 140, 0]
+            self.color_fogger = [255, 255, 200]
 
         elif color == 'amber':
             self.color = [0, 41, 0, 0, 255, 0]
+            self.color_fogger = [0, 0, 0]
 
         elif color == 'orange':
             self.color = [255, 120, 0, 0, 110, 0]
+            self.color_fogger = [255, 120, 0]
 
         elif color == 'yellow':
             self.color = [255, 220, 0, 0, 244, 0]
+            self.color_fogger = [255, 220, 0]
 
         elif color == 'red':
             self.color = [255, 0, 0, 0, 0, 0]
+            self.color_fogger = [255, 0, 0]
 
         elif color == 'magenta':
             self.color = [142, 0, 0, 0, 0, 255]
+            self.color_fogger = [0, 0, 0]
 
         elif color == 'purple':
             self.color = [211, 25, 255, 0, 0, 255]
+            self.color_fogger = [211, 25, 255]
 
         elif color == 'uv':
             self.color = [0, 0, 0, 0, 0, 255]
+            self.color_fogger = [0, 0, 0]
 
         elif color == 'turquoise':
             self.color = [0, 255, 158, 0, 0, 255]
+            self.color_fogger = [0, 255, 158]
 
         elif color == 'nothing':
             self.color = [0, 0, 0, 0, 0, 0]
+            self.color_fogger = [0, 0, 0]
 
     def get_color(self):
         return self.color
+    
+    def get_color_fogger(self):
+        return self.color_fogger
 
     def get_color_name(self):
         return self.color_name
