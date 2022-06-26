@@ -22,10 +22,10 @@ for fogger in [fogger_01, fogger_02]:
 def main():
 
     '''static functions'''
-    strobe = 0
-    color1 = Colors('red')
+    #strobe = 0
+    #color1 = Colors('red')
     #color2 = Colors('white_plain')
-    name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
+    #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
     #name = set_top_color(color1, strobe, left = True, right = True)
     #name = set_bottom_color(color1, strobe, left = True, right = True)
@@ -37,17 +37,17 @@ def main():
     #name = set_lights_off()
 
     '''dynamic functions'''
-    color1 = Colors('blue_cold')
+    color1 = Colors('red')
     strobe = 0
     chase_percentage = 10
     chase_shift_left = 0
     chase_shift_right = 100
     dynamics = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage)
-    #dynamics.set_min_max_mid([1,0,0,0,0,0], [254,0,0,0,0,0], [25,0,0,0,0,0])
+    dynamics.set_min_max(min = [1,0,0,0,0,0], max = [254,0,0,0,0,0], curve_min = [25,0,0,0,0,0], curve_max = [200,0,0,0,0,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
-    #name = set_full_color_movement(color1, dynamics, strobe)
+    name = set_full_color_movement(color1, dynamics, strobe)
     #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
 
 

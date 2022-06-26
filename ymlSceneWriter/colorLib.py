@@ -102,13 +102,15 @@ class DynamicColors:
                 else:
                     self.movement.append({'shape': movement_shape, 'duration_' + self.timing_unit: self.duration, 'delay_percentage': self.chase_percentage})
     
-    def set_min_max_mid(self, min, max, mid = None):
-        # min, max and mid must be lists of size 6 to represent R, G, B, W, A, UV
+    def set_min_max(self, min, max, curve_min = None, curve_max = None):
+        # min, max and curve_min, curve_max must be lists of size 6 to represent R, G, B, W, A, UV
         for i in range(0,6):
             self.movement[i]['min'] = min[i]
             self.movement[i]['max'] = max[i]
-            if mid != None:
-                self.movement[i]['mid'] = mid[i]
+            if curve_min != None:
+                self.movement[i]['curve_min'] = curve_min[i]
+            if curve_max != None:
+                self.movement[i]['curve_max'] = curve_max[i]
 
     def set_duration(self, duration):
         self.duration = duration

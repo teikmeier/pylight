@@ -6,97 +6,133 @@ faders:
     value: 255
   2:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   8:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   14:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   20:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   26:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   32:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   38:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   44:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   50:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   56:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   62:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   68:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
@@ -105,97 +141,149 @@ faders:
     value: 255
   76:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   82:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   88:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   94:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   100:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   106:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   112:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   118:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   124:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   130:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   136:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
     type: default
     value: 255
   142:
     movement:
+      curve_max: 200
+      curve_min: 25
+      delay_percentage: 10
       duration_percentage: 400
-      max: 255
-      min: 0
+      max: 254
+      min: 1
       shape: saw
+    type: default
+    value: 255
+  148:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  149:
+    type: default
+    value: 255
+  155:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  156:
     type: default
     value: 255
