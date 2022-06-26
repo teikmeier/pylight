@@ -16,6 +16,8 @@ fogger_02 = Fixtures(dmx_adress = 156, dimmer_channel= 2, strobe_channel = 4, co
 #set overall faders
 faders = {led_bar_01.get_dimmer_adress(): {'value': 255, 'type': 'default'},  led_bar_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_01.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}}
 
+for fogger in [fogger_01, fogger_02]:
+    faders[fogger.get_fog_adress()] = {'value': 0, 'type': 'midi', 'params': {'note': 60}}
 
 def main():
 
@@ -23,9 +25,9 @@ def main():
     strobe = 0
     color1 = Colors('red')
     #color2 = Colors('white_plain')
-    #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
+    name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
-    name = set_top_color(color1, strobe, left = True, right = True)
+    #name = set_top_color(color1, strobe, left = True, right = True)
     #name = set_bottom_color(color1, strobe, left = True, right = True)
     #name = set_rise_color(color1, strobe, rise_number = 2, left = True, right = False)
     #name = set_seconds_colors(color1, color2, strobe)
