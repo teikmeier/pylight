@@ -17,7 +17,7 @@ fogger_02 = Fixtures(dmx_adress = 156, dimmer_channel= 2, strobe_channel = 4, co
 faders = {led_bar_01.get_dimmer_adress(): {'value': 255, 'type': 'default'},  led_bar_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_01.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}}
 
 for fogger in [fogger_01, fogger_02]:
-    faders[fogger.get_fog_adress()] = {'value': 0, 'type': 'midi', 'params': {'note': 60}}
+    faders[fogger.get_fog_adress()] = {'value': 255, 'type': 'midi', 'params': {'note': 60}}
 
 def main():
 
