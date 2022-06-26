@@ -22,10 +22,10 @@ for fogger in [fogger_01, fogger_02]:
 def main():
 
     '''static functions'''
-    strobe = 150
-    color1 = Colors('red')
+    #strobe = 150
+    #color1 = Colors('red')
     #color2 = Colors('nothing')
-    name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
+    #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
     #name = set_top_color(color1, strobe, left = True, right = False)
     #name = set_bottom_color(color1, strobe, left = True, right = False)
@@ -38,18 +38,23 @@ def main():
 
     '''dynamic functions'''
     color1 = Colors('red')
+    color2 = Colors('amber')
     strobe = 0
-    chase_percentage = 10
-    #chase_shift_left = 0
-    #chase_shift_right = 100
-    #dynamics = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage)
+    chase_percentage1 = 8
+    chase_shift_left1 = 0
+    chase_shift_right1 = 100
+    chase_percentage2 = 16
+    chase_shift_left2 = 50
+    chase_shift_right2 = 150
+    dynamics1 = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
+    dynamics2 = DynamicColors('sine', color2, duration_percentage = 400, chase_percentage = chase_percentage2)
     #dynamics.set_min_max(min = [1,0,0,0,0,0], max = [254,0,0,0,0,0], curve_min = [25,0,0,0,0,0], curve_max = [200,0,0,0,0,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
     #name = set_full_color_movement(color1, dynamics, strobe)
     #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
-
+    name = set_two_color_chase(color1, color2, dynamics1, dynamics2, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1, chase_percentage2, chase_shift_left2, chase_shift_right2)
 
     scene['faders'] = faders
 
@@ -360,6 +365,50 @@ def set_full_color_chase(color, movement, strobe = 0, chase_percentage = 0, chas
             set_color_group(color_group, color, movement)
 
         chase_shift = chase_shift_right
+    return name
+
+
+def set_two_color_chase(color1, color2, movement1, movement2, strobe = 0, chase_percentage1 = 0, chase_shift_left1 = 0, chase_shift_right1 = 0, chase_percentage2 = 0, chase_shift_left2 = 0, chase_shift_right2 = 0, right = True, left = True):
+    led_bars, side_name = choose_led_bars(right, left)
+    name = 'TwoColor_' + color1.get_color_name() + '_' + movement1.get_shape() + ' ' + color2.get_color_name() + '_' + movement2.get_shape()+ ' ' + side_name
+    #if chase_percentage > 0:
+    #    name = name + '_chase_pct' + str(chase_percentage)
+    if strobe > 0:
+        name = name + '_strobe'
+    #if movement.is_reverse() == True:
+    #    name = name + '_rev'
+    #if movement.get_repitition() > 0:
+    #    name = name + '_rep'+ str(movement.get_repitition())
+    name = name + '_dur' + str(movement1.get_duration()) + str(movement1.get_timing_unit())
+    scene['01_name'] = name
+    chase_shift = chase_shift_left1
+
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            movement1.set_chase_percentage(chase_shift + i*chase_percentage1)
+        
+            set_color_group(color_group, color1, movement1)
+
+        chase_shift = chase_shift_right1
+
+    chase_shift = chase_shift_left2
+
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            movement2.set_chase_percentage(chase_shift + i*chase_percentage2)
+        
+            set_color_group(color_group, color2, movement2)
+
+        chase_shift = chase_shift_right2
+    
     return name
 
 
