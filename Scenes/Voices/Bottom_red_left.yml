@@ -1,0 +1,43 @@
+00_version: '0.1'
+01_name: Bottom_red_left
+faders:
+  0:
+    type: default
+    value: 0
+  74:
+    type: default
+    value: 255
+  112:
+    type: default
+    value: 255
+  118:
+    type: default
+    value: 255
+  124:
+    type: default
+    value: 255
+  130:
+    type: default
+    value: 255
+  136:
+    type: default
+    value: 255
+  142:
+    type: default
+    value: 255
+  148:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  149:
+    type: default
+    value: 255
+  155:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  156:
+    type: default
+    value: 255

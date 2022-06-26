@@ -22,16 +22,16 @@ for fogger in [fogger_01, fogger_02]:
 def main():
 
     '''static functions'''
-    #strobe = 0
-    #color1 = Colors('red')
-    #color2 = Colors('white_plain')
-    #name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
+    strobe = 150
+    color1 = Colors('red')
+    #color2 = Colors('nothing')
+    name = set_full_color(color1, strobe, left = True, right = True)       #left and right can be specified optionally
     #name = set_cross_colors(color1, color2, strobe)
-    #name = set_top_color(color1, strobe, left = True, right = True)
-    #name = set_bottom_color(color1, strobe, left = True, right = True)
+    #name = set_top_color(color1, strobe, left = True, right = False)
+    #name = set_bottom_color(color1, strobe, left = True, right = False)
     #name = set_rise_color(color1, strobe, rise_number = 2, left = True, right = False)
     #name = set_seconds_colors(color1, color2, strobe)
-    #name = set_combo_colors(color1, color2, strobe, combo = 4, invert = True) #combo can be set to 2,3,4 / invert = True inverts the second LED bar
+    #name = set_combo_colors(color1, color2, strobe, combo = 4, invert = False) #combo can be set to 2,3,4 / invert = True inverts the second LED bar
     #name = set_outer2_colors(color1, color2, strobe, invert = False)
     #name = set_outer3_colors(color1, color2, strobe, invert = False)
     #name = set_lights_off()
@@ -40,14 +40,14 @@ def main():
     color1 = Colors('red')
     strobe = 0
     chase_percentage = 10
-    chase_shift_left = 0
-    chase_shift_right = 100
-    dynamics = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage)
-    dynamics.set_min_max(min = [1,0,0,0,0,0], max = [254,0,0,0,0,0], curve_min = [25,0,0,0,0,0], curve_max = [200,0,0,0,0,0])
+    #chase_shift_left = 0
+    #chase_shift_right = 100
+    #dynamics = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage)
+    #dynamics.set_min_max(min = [1,0,0,0,0,0], max = [254,0,0,0,0,0], curve_min = [25,0,0,0,0,0], curve_max = [200,0,0,0,0,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
-    name = set_full_color_movement(color1, dynamics, strobe)
+    #name = set_full_color_movement(color1, dynamics, strobe)
     #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
 
 
@@ -144,14 +144,14 @@ def set_top_color(color, strobe,  right = True, left = True):
         
             if (i%12 < 6):
                 set_color_group(color_group, color)
-
-    for fogger in foggers:
-        faders[fogger.get_dimmer_adress()] = define_fader(255)
-        if strobe > 0:
-            faders[fogger.get_strobe_adress()] = define_fader(strobe)
-        for i in range(0, fogger.number_of_color_groups):
-            color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
-            set_color_group(color_group, color, fogger_flag = True)
+    if right == True and left == True:
+        for fogger in foggers:
+            faders[fogger.get_dimmer_adress()] = define_fader(255)
+            if strobe > 0:
+                faders[fogger.get_strobe_adress()] = define_fader(strobe)
+            for i in range(0, fogger.number_of_color_groups):
+                color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
+                set_color_group(color_group, color, fogger_flag = True)
 
     return name
 
@@ -173,13 +173,14 @@ def set_bottom_color(color, strobe,  right = True, left = True):
             if (i%12 >= 6):
                 set_color_group(color_group, color)
 
-    for fogger in foggers:
-        faders[fogger.get_dimmer_adress()] = define_fader(255)
-        if strobe > 0:
-            faders[fogger.get_strobe_adress()] = define_fader(strobe)
-        for i in range(0, fogger.number_of_color_groups):
-            color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
-            set_color_group(color_group, color, fogger_flag = True)
+    if right == True and left == True:
+        for fogger in foggers:
+            faders[fogger.get_dimmer_adress()] = define_fader(255)
+            if strobe > 0:
+                faders[fogger.get_strobe_adress()] = define_fader(strobe)
+            for i in range(0, fogger.number_of_color_groups):
+                color_group = ColorGroups(fogger.color_group_size, fogger.get_color_groups_adress() + i*fogger.color_group_size)
+                set_color_group(color_group, color, fogger_flag = True)
 
     return name
 
@@ -233,7 +234,7 @@ def set_combo_colors(color1, color2, strobe, combo, invert):   #combo (int) is t
 
 def set_outer2_colors(color1, color2, strobe, invert):   #combo (int) is the number of neighbor LEDs with the same color, can be set to 2,3,4
     led_bars = [led_bar_01, led_bar_02]
-    name = 'Outer2' + color1.get_color_name() + '_and_' + color2.get_color_name()
+    name = 'Outer2_' + color1.get_color_name() + '_and_' + color2.get_color_name()
     if invert == True:
         name = name + '_invert'
     if strobe > 0:

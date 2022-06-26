@@ -1,0 +1,265 @@
+00_version: '0.1'
+01_name: Full_orange_strobe
+faders:
+  0:
+    type: default
+    value: 255
+  1:
+    type: default
+    value: 150
+  2:
+    type: default
+    value: 255
+  3:
+    type: default
+    value: 120
+  6:
+    type: default
+    value: 110
+  8:
+    type: default
+    value: 255
+  9:
+    type: default
+    value: 120
+  12:
+    type: default
+    value: 110
+  14:
+    type: default
+    value: 255
+  15:
+    type: default
+    value: 120
+  18:
+    type: default
+    value: 110
+  20:
+    type: default
+    value: 255
+  21:
+    type: default
+    value: 120
+  24:
+    type: default
+    value: 110
+  26:
+    type: default
+    value: 255
+  27:
+    type: default
+    value: 120
+  30:
+    type: default
+    value: 110
+  32:
+    type: default
+    value: 255
+  33:
+    type: default
+    value: 120
+  36:
+    type: default
+    value: 110
+  38:
+    type: default
+    value: 255
+  39:
+    type: default
+    value: 120
+  42:
+    type: default
+    value: 110
+  44:
+    type: default
+    value: 255
+  45:
+    type: default
+    value: 120
+  48:
+    type: default
+    value: 110
+  50:
+    type: default
+    value: 255
+  51:
+    type: default
+    value: 120
+  54:
+    type: default
+    value: 110
+  56:
+    type: default
+    value: 255
+  57:
+    type: default
+    value: 120
+  60:
+    type: default
+    value: 110
+  62:
+    type: default
+    value: 255
+  63:
+    type: default
+    value: 120
+  66:
+    type: default
+    value: 110
+  68:
+    type: default
+    value: 255
+  69:
+    type: default
+    value: 120
+  72:
+    type: default
+    value: 110
+  74:
+    type: default
+    value: 255
+  75:
+    type: default
+    value: 150
+  76:
+    type: default
+    value: 255
+  77:
+    type: default
+    value: 120
+  80:
+    type: default
+    value: 110
+  82:
+    type: default
+    value: 255
+  83:
+    type: default
+    value: 120
+  86:
+    type: default
+    value: 110
+  88:
+    type: default
+    value: 255
+  89:
+    type: default
+    value: 120
+  92:
+    type: default
+    value: 110
+  94:
+    type: default
+    value: 255
+  95:
+    type: default
+    value: 120
+  98:
+    type: default
+    value: 110
+  100:
+    type: default
+    value: 255
+  101:
+    type: default
+    value: 120
+  104:
+    type: default
+    value: 110
+  106:
+    type: default
+    value: 255
+  107:
+    type: default
+    value: 120
+  110:
+    type: default
+    value: 110
+  112:
+    type: default
+    value: 255
+  113:
+    type: default
+    value: 120
+  116:
+    type: default
+    value: 110
+  118:
+    type: default
+    value: 255
+  119:
+    type: default
+    value: 120
+  122:
+    type: default
+    value: 110
+  124:
+    type: default
+    value: 255
+  125:
+    type: default
+    value: 120
+  128:
+    type: default
+    value: 110
+  130:
+    type: default
+    value: 255
+  131:
+    type: default
+    value: 120
+  134:
+    type: default
+    value: 110
+  136:
+    type: default
+    value: 255
+  137:
+    type: default
+    value: 120
+  140:
+    type: default
+    value: 110
+  142:
+    type: default
+    value: 255
+  143:
+    type: default
+    value: 120
+  146:
+    type: default
+    value: 110
+  148:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  149:
+    type: default
+    value: 255
+  151:
+    type: default
+    value: 150
+  152:
+    type: default
+    value: 255
+  153:
+    type: default
+    value: 120
+  155:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  156:
+    type: default
+    value: 255
+  158:
+    type: default
+    value: 150
+  159:
+    type: default
+    value: 255
+  160:
+    type: default
+    value: 120

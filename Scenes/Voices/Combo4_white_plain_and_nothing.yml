@@ -1,0 +1,73 @@
+00_version: '0.1'
+01_name: Combo4_white_plain_and_nothing
+faders:
+  0:
+    type: default
+    value: 255
+  5:
+    type: default
+    value: 255
+  11:
+    type: default
+    value: 255
+  17:
+    type: default
+    value: 255
+  23:
+    type: default
+    value: 255
+  53:
+    type: default
+    value: 255
+  59:
+    type: default
+    value: 255
+  65:
+    type: default
+    value: 255
+  71:
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  79:
+    type: default
+    value: 255
+  85:
+    type: default
+    value: 255
+  91:
+    type: default
+    value: 255
+  97:
+    type: default
+    value: 255
+  127:
+    type: default
+    value: 255
+  133:
+    type: default
+    value: 255
+  139:
+    type: default
+    value: 255
+  145:
+    type: default
+    value: 255
+  148:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  149:
+    type: default
+    value: 255
+  155:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  156:
+    type: default
+    value: 255

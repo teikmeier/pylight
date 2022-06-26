@@ -1,45 +1,49 @@
 00_version: '0.1'
-01_name: Top_red_
+01_name: Outer2_white_plain_and_nothing
 faders:
   0:
     type: default
     value: 255
-  2:
+  5:
     type: default
     value: 255
-  8:
+  11:
     type: default
     value: 255
-  14:
+  65:
     type: default
     value: 255
-  20:
-    type: default
-    value: 255
-  26:
-    type: default
-    value: 255
-  32:
+  71:
     type: default
     value: 255
   74:
     type: default
     value: 255
-  76:
+  79:
     type: default
     value: 255
-  82:
+  85:
     type: default
     value: 255
-  88:
+  139:
     type: default
     value: 255
-  94:
+  145:
     type: default
     value: 255
-  100:
+  148:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  149:
     type: default
     value: 255
-  106:
+  155:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  156:
     type: default
     value: 255
