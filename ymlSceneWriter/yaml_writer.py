@@ -41,15 +41,18 @@ def main():
     color1 = Colors('red')
     color2 = Colors('amber')
     strobe = 0
-    chase_percentage1 = 8.3
+
+    chase_percentage1 = 4.15
     chase_shift_left1 = 0
-    chase_shift_right1 = 100
-    chase_percentage2 = 16.6
-    chase_shift_left2 = 50
-    chase_shift_right2 = 150
-    dynamics1 = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
-    dynamics2 = DynamicColors('sine', color2, duration_percentage = 400, chase_percentage = chase_percentage2)
-    #dynamics.set_min_max(min = [1,0,0,0,0,0], max = [254,0,0,0,0,0], curve_min = [25,0,0,0,0,0], curve_max = [200,0,0,0,0,0])
+    chase_shift_right1 = 50
+
+    chase_percentage2 = 4.15
+    chase_shift_left2 = 25
+    chase_shift_right2 = 75
+
+    dynamics1 = DynamicColors('sine', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
+    dynamics2 = DynamicColors('sine', color2, duration_percentage = 200, chase_percentage = chase_percentage2)
+    dynamics1.set_min_max(min = [0,0,0,0,0,0], max = [255,0,0,0,0,0], curve_min = [10,0,0,0,0,0], curve_max = [255,0,0,0,0,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
