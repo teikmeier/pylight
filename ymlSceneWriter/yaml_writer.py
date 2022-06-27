@@ -2,6 +2,7 @@ import yaml
 from fixtures import Fixtures, ColorGroups
 from colorLib import Colors, DynamicColors
 import copy
+import math
 
 
 scene = {'00_version': '0.1'}
@@ -34,17 +35,16 @@ def main():
     #name = set_combo_colors(color1, color2, strobe, combo = 4, invert = False) #combo can be set to 2,3,4 / invert = True inverts the second LED bar
     #name = set_outer2_colors(color1, color2, strobe, invert = False)
     #name = set_outer3_colors(color1, color2, strobe, invert = False)
-    name = set_lights_off()
+    #name = set_lights_off()
 
     '''dynamic functions'''
-    '''
     color1 = Colors('red')
     color2 = Colors('amber')
     strobe = 0
-    chase_percentage1 = 8
+    chase_percentage1 = 8.3
     chase_shift_left1 = 0
     chase_shift_right1 = 100
-    chase_percentage2 = 16
+    chase_percentage2 = 16.6
     chase_shift_left2 = 50
     chase_shift_right2 = 150
     dynamics1 = DynamicColors('saw', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
@@ -56,7 +56,7 @@ def main():
     #name = set_full_color_movement(color1, dynamics, strobe)
     #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
     name = set_two_color_chase(color1, color2, dynamics1, dynamics2, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1, chase_percentage2, chase_shift_left2, chase_shift_right2)
-    '''
+    
     scene['faders'] = faders
 
     #write yml file
@@ -365,7 +365,7 @@ def set_full_color_chase(color, movement, strobe = 0, chase_percentage = 0, chas
             faders[led_bar.get_strobe_adress()] = define_fader(strobe)
         for i in range(0, led_bar.number_of_color_groups):
             color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
-            movement.set_chase_percentage(chase_shift + i*chase_percentage)
+            movement.set_chase_percentage(int(round(chase_shift + i*chase_percentage)))
         
             set_color_group(color_group, color, movement)
 
@@ -394,7 +394,7 @@ def set_two_color_chase(color1, color2, movement1, movement2, strobe = 0, chase_
             faders[led_bar.get_strobe_adress()] = define_fader(strobe)
         for i in range(0, led_bar.number_of_color_groups):
             color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
-            movement1.set_chase_percentage(chase_shift + i*chase_percentage1)
+            movement1.set_chase_percentage(int(round(chase_shift + i*chase_percentage1)))
         
             set_color_group(color_group, color1, movement1)
 
@@ -408,7 +408,7 @@ def set_two_color_chase(color1, color2, movement1, movement2, strobe = 0, chase_
             faders[led_bar.get_strobe_adress()] = define_fader(strobe)
         for i in range(0, led_bar.number_of_color_groups):
             color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
-            movement2.set_chase_percentage(chase_shift + i*chase_percentage2)
+            movement2.set_chase_percentage(int(round(chase_shift + i*chase_percentage2)))
         
             set_color_group(color_group, color2, movement2)
 
