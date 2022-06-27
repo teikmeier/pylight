@@ -6,264 +6,216 @@ faders:
     value: 255
   3:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 0
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   6:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 0
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   9:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 61
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   12:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 61
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   15:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 122
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   18:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 122
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   21:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 183
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   24:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 183
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   27:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 244
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   30:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 244
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   33:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 305
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   36:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 305
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   39:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 366
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   42:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 366
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   45:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 427
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   48:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 427
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   51:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 488
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   54:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 488
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   57:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 549
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   60:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 549
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   63:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 610
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   66:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 610
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   69:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 671
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   72:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 671
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
@@ -273,264 +225,216 @@ faders:
     value: 255
   77:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 50
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   80:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 50
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   83:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 111
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   86:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 111
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   89:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 172
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   92:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 172
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   95:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 233
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   98:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 233
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   101:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 294
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   104:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 294
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   107:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 355
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   110:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 355
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   113:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 416
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   116:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 416
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   119:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 477
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   122:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 477
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   125:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 538
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   128:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 538
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   131:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 599
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   134:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 599
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   137:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 660
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   140:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 660
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
     value: 255
   143:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 721
       duration_percentage: 400
-      max: 0
+      max: 41
       min: 0
       shape: sine
     type: default
     value: 41
   146:
     movement:
-      curve_max: 0
-      curve_min: 0
       delay_percentage: 721
       duration_percentage: 400
-      max: 0
+      max: 255
       min: 0
       shape: sine
     type: default
@@ -538,6 +442,7 @@ faders:
   148:
     params:
       note: 60
+      timeout_ms: 8000
     type: midi
     value: 255
   149:
@@ -546,6 +451,7 @@ faders:
   155:
     params:
       note: 60
+      timeout_ms: 8000
     type: midi
     value: 255
   156:

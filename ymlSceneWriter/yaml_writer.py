@@ -18,7 +18,7 @@ fogger_02 = Fixtures(dmx_adress = 156, dimmer_channel= 2, strobe_channel = 4, co
 faders = {led_bar_01.get_dimmer_adress(): {'value': 255, 'type': 'default'},  led_bar_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_01.get_dimmer_adress(): {'value': 255, 'type': 'default'}, fogger_02.get_dimmer_adress(): {'value': 255, 'type': 'default'}}
 
 for fogger in [fogger_01, fogger_02]:
-    faders[fogger.get_fog_adress()] = {'value': 255, 'type': 'midi', 'params': {'note': 60}}
+    faders[fogger.get_fog_adress()] = {'value': 255, 'type': 'midi', 'params': {'note': 60, 'timeout_ms': 8000}}
 
 def main():
 
@@ -42,7 +42,7 @@ def main():
     color2 = Colors('red')
     strobe = 0
 
-    chase_percentage1 = 61
+    chase_percentage1 = 53
     chase_shift_left1 = 0
     chase_shift_right1 = 50
 
@@ -52,7 +52,7 @@ def main():
 
     dynamics1 = DynamicColors('sine', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
     dynamics2 = DynamicColors('sine', color2, duration_percentage = 200, chase_percentage = chase_percentage2)
-    dynamics1.set_min_max(min = [0,0,0,0,0,0], max = [255,0,0,0,0,0], curve_min = [10,0,0,0,0,0], curve_max = [255,0,0,0,0,0])
+    #dynamics1.set_min_max(min = [0,0,0,0,0,0], max = [255,0,0,0,0,0], curve_min = [10,0,0,0,0,0], curve_max = [255,0,0,0,0,0])
     #dynamics2.set_min_max(min = [0,0,0,0,0,0], max = [0,41,0,0,255,0], curve_min = [0,-5,0,0,-31,0], curve_max = [0,41,0,0,255,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
