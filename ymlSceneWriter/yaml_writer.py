@@ -42,25 +42,26 @@ def main():
     color2 = Colors('amber')
     strobe = 0
 
-    chase_percentage1 = 4.15
+    chase_percentage1 = 53
     chase_shift_left1 = 0
-    chase_shift_right1 = 25
+    chase_shift_right1 = 50
 
     chase_percentage2 = 4.15
     chase_shift_left2 = 25
     chase_shift_right2 = 75
 
-    dynamics1 = DynamicColors('sine', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
+    dynamics1 = DynamicColors('sine', color1, duration_percentage = 800, chase_percentage = chase_percentage1)
     dynamics2 = DynamicColors('sine', color2, duration_percentage = 200, chase_percentage = chase_percentage2)
     dynamics1.set_min_max(min = [0,0,0,0,0,0], max = [255,0,0,0,0,0], curve_min = [10,0,0,0,0,0], curve_max = [255,0,0,0,0,0])
-    dynamics2.set_min_max(min = [0,0,0,0,0,0], max = [0,41,0,0,255,0], curve_min = [0,-5,0,0,-31,0], curve_max = [0,41,0,0,255,0])
+    #dynamics2.set_min_max(min = [0,0,0,0,0,0], max = [0,41,0,0,255,0], curve_min = [0,-5,0,0,-31,0], curve_max = [0,41,0,0,255,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
     #name = set_full_color_movement(color1, dynamics, strobe)
     #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
-    name = set_two_color_chase(color1, color2, dynamics1, dynamics2, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1, chase_percentage2, chase_shift_left2, chase_shift_right2)
-    
+    #name = set_two_color_chase(color1, color2, dynamics1, dynamics2, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1, chase_percentage2, chase_shift_left2, chase_shift_right2)
+    name = set_two_color_static_plus_chase(color1, color2, dynamics1, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1)
+
     scene['faders'] = faders
 
     #write yml file
@@ -419,6 +420,47 @@ def set_two_color_chase(color1, color2, movement1, movement2, strobe = 0, chase_
         chase_shift = chase_shift_right2
     
     return name
+
+
+def set_two_color_static_plus_chase(color1, color2, movement1, strobe = 0, chase_percentage1 = 0, chase_shift_left1 = 0, chase_shift_right1 = 0, right = True, left = True):
+    led_bars, side_name = choose_led_bars(right, left)
+    name = 'Full_' + color2.get_color_name() + '_and_' + color1.get_color_name() + '_' + movement1.get_shape() + '_chase'
+    if strobe > 0:
+        name = name + '_strobe'
+    if movement1.is_reverse() == True:
+        name = name + '_rev'
+    if movement1.get_repitition() > 0:
+        name = name + '_rep'+ str(movement1.get_repitition())
+    name = name + '_dur' + str(movement1.get_duration()) + str(movement1.get_timing_unit())
+    scene['01_name'] = name
+
+    #static subscene
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            set_color_group(color_group, color2)
+    
+    #dynamic subscene
+    chase_shift = chase_shift_left1
+
+    for led_bar in led_bars:
+        faders[led_bar.get_dimmer_adress()] = define_fader(255)
+        if strobe > 0:
+            faders[led_bar.get_strobe_adress()] = define_fader(strobe)
+        for i in range(0, led_bar.number_of_color_groups):
+            color_group = ColorGroups(led_bar.color_group_size, led_bar.get_color_groups_adress() + i*led_bar.color_group_size)
+            movement1.set_chase_percentage(int(round(chase_shift + i*chase_percentage1)))
+        
+            set_color_group(color_group, color1, movement1)
+
+        chase_shift = chase_shift_right1
+
+    return name
+
+
 
 
 '''
