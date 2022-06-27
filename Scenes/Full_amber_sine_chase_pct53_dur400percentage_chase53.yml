@@ -1,0 +1,553 @@
+00_version: '0.1'
+01_name: Full_amber_sine_chase_pct53_dur400percentage
+faders:
+  0:
+    type: default
+    value: 255
+  3:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 0
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  6:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 0
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  9:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 53
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  12:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 53
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  15:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 106
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  18:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 106
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  21:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 159
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  24:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 159
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  27:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 212
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  30:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 212
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  33:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 265
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  36:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 265
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  39:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 318
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  42:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 318
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  45:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 371
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  48:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 371
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  51:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 424
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  54:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 424
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  57:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 477
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  60:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 477
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  63:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 530
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  66:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 530
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  69:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 583
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  72:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 583
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  74:
+    type: default
+    value: 255
+  77:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 50
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  80:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 50
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  83:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 103
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  86:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 103
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  89:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 156
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  92:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 156
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  95:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 209
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  98:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 209
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  101:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 262
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  104:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 262
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  107:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 315
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  110:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 315
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  113:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 368
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  116:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 368
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  119:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 421
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  122:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 421
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  125:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 474
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  128:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 474
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  131:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 527
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  134:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 527
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  137:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 580
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  140:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 580
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  143:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 633
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 41
+  146:
+    movement:
+      curve_max: 0
+      curve_min: 0
+      delay_percentage: 633
+      duration_percentage: 400
+      max: 0
+      min: 0
+      shape: sine
+    type: default
+    value: 255
+  148:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  149:
+    type: default
+    value: 255
+  155:
+    params:
+      note: 60
+    type: midi
+    value: 255
+  156:
+    type: default
+    value: 255

@@ -38,11 +38,11 @@ def main():
     #name = set_lights_off()
 
     '''dynamic functions'''
-    color1 = Colors('red')
-    color2 = Colors('amber')
+    color1 = Colors('amber')
+    color2 = Colors('red')
     strobe = 0
 
-    chase_percentage1 = 53
+    chase_percentage1 = 61
     chase_shift_left1 = 0
     chase_shift_right1 = 50
 
@@ -50,7 +50,7 @@ def main():
     chase_shift_left2 = 25
     chase_shift_right2 = 75
 
-    dynamics1 = DynamicColors('sine', color1, duration_percentage = 800, chase_percentage = chase_percentage1)
+    dynamics1 = DynamicColors('sine', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
     dynamics2 = DynamicColors('sine', color2, duration_percentage = 200, chase_percentage = chase_percentage2)
     dynamics1.set_min_max(min = [0,0,0,0,0,0], max = [255,0,0,0,0,0], curve_min = [10,0,0,0,0,0], curve_max = [255,0,0,0,0,0])
     #dynamics2.set_min_max(min = [0,0,0,0,0,0], max = [0,41,0,0,255,0], curve_min = [0,-5,0,0,-31,0], curve_max = [0,41,0,0,255,0])
@@ -58,9 +58,9 @@ def main():
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
     #name = set_full_color_movement(color1, dynamics, strobe)
-    #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
+    name = set_full_color_chase(color1, dynamics1, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1)
     #name = set_two_color_chase(color1, color2, dynamics1, dynamics2, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1, chase_percentage2, chase_shift_left2, chase_shift_right2)
-    name = set_two_color_static_plus_chase(color1, color2, dynamics1, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1)
+    #name = set_two_color_static_plus_chase(color1, color2, dynamics1, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1)
 
     scene['faders'] = faders
 
