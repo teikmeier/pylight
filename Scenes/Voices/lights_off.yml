@@ -8,18 +8,14 @@ faders:
     type: default
     value: 0
   148:
-    params:
-      note: 60
-    type: midi
-    value: 255
+    type: default
+    value: 0
   149:
     type: default
-    value: 255
+    value: 0
   155:
-    params:
-      note: 60
-    type: midi
-    value: 255
+    type: default
+    value: 0
   156:
     type: default
-    value: 255
+    value: 0

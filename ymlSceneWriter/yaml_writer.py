@@ -44,7 +44,7 @@ def main():
 
     chase_percentage1 = 4.15
     chase_shift_left1 = 0
-    chase_shift_right1 = 50
+    chase_shift_right1 = 25
 
     chase_percentage2 = 4.15
     chase_shift_left2 = 25
@@ -53,6 +53,7 @@ def main():
     dynamics1 = DynamicColors('sine', color1, duration_percentage = 400, chase_percentage = chase_percentage1)
     dynamics2 = DynamicColors('sine', color2, duration_percentage = 200, chase_percentage = chase_percentage2)
     dynamics1.set_min_max(min = [0,0,0,0,0,0], max = [255,0,0,0,0,0], curve_min = [10,0,0,0,0,0], curve_max = [255,0,0,0,0,0])
+    dynamics2.set_min_max(min = [0,0,0,0,0,0], max = [0,41,0,0,255,0], curve_min = [0,-5,0,0,-31,0], curve_max = [255,0,0,0,0,0])
     #dynamics.set_duration(200)
     #dynamics.set_repition(1)
     #dynamics.set_reverse(True)
