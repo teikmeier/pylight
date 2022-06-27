@@ -34,9 +34,10 @@ def main():
     #name = set_combo_colors(color1, color2, strobe, combo = 4, invert = False) #combo can be set to 2,3,4 / invert = True inverts the second LED bar
     #name = set_outer2_colors(color1, color2, strobe, invert = False)
     #name = set_outer3_colors(color1, color2, strobe, invert = False)
-    #name = set_lights_off()
+    name = set_lights_off()
 
     '''dynamic functions'''
+    '''
     color1 = Colors('red')
     color2 = Colors('amber')
     strobe = 0
@@ -55,7 +56,7 @@ def main():
     #name = set_full_color_movement(color1, dynamics, strobe)
     #name = set_full_color_chase(color1, dynamics, strobe, chase_percentage, chase_shift_left, chase_shift_right)
     name = set_two_color_chase(color1, color2, dynamics1, dynamics2, strobe, chase_percentage1, chase_shift_left1, chase_shift_right1, chase_percentage2, chase_shift_left2, chase_shift_right2)
-
+    '''
     scene['faders'] = faders
 
     #write yml file
@@ -297,11 +298,15 @@ def set_outer3_colors(color1, color2, strobe, invert):   #combo (int) is the num
 
 def set_lights_off():
     led_bars = [led_bar_01, led_bar_02]
+    foggers = [fogger_01, fogger_02]
     name = 'lights_off'
     scene['01_name'] = name
 
     for led_bar in led_bars:
         faders[led_bar.get_dimmer_adress()] = define_fader(0)
+    for fogger in foggers:
+        faders[fogger.get_dimmer_adress()] = define_fader(0)
+        faders[fogger.get_fog_adress()] = define_fader(0)
 
     return name
 
