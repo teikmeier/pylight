@@ -1,0 +1,34 @@
+Things to keep in mind regarding chases:
+
+- chase_percentage = 8.3 means exactly one waving is moving along the 12-light LED bar.
+- chase_percentage = 4.15 means exactly one waving is moving across both LED bars.
+- chase_percentage = 16.67 means a double wave is moving across the 12-light LED bar.
+- ....and so on.
+
+
+To invert the direction of the chase wave:
+- increase chase_shifts (starting values) by 100 (percent)
+- make chase_percentage value negative (don't drop delays below 0!!!!)
+
+
+For completely random "Funkeln":
+- it's best so far to just just random values by hand.
+- to keep the lights off for most of the time, it's good to set curve_min values in the strong negative (and min to 0)
+
+
+
+Swirl typically means:
+- sine wave across the LED bar (exactly one so chase_percentage = 8.3) but with following min, max settings:
+	- max = curve_max = color values
+	- min = curve_min = percentage of color values (eg. 25%)
+	
+	
+
+Fade in:
+-saw without reverse on the main faders
+
+Fade out:
+-saw with reverse on the main faders
+
+
+
